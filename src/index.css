@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ─────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: #fdf8f0;
+  color: #2d2d2d;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Custom Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar { width: 0.4vw; height: 0.4vw; }
+::-webkit-scrollbar-track { background: #fdf8f0; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg,#d4af37,#c8951c); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #b45309; }
+
+/* ── Gold Divider ─────────────────────────────────────── */
+.gold-divider {
+  width: 4vw;
+  height: 0.15vw;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 0 auto;
+}
+
+/* ── Gold text shimmer ────────────────────────────────── */
+.gold-shimmer {
+  background: linear-gradient(90deg, #d4af37 0%, #f5d77e 30%, #c8951c 50%, #f5d77e 70%, #d4af37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ── Lookbook auto-scroll strip ───────────────────────── */
+.lookbook-track {
+  display: flex;
+  gap: 1.5vw;
+  animation: scrollX 50s linear infinite;
+  width: max-content;
+}
+
+.lookbook-track:hover { animation-play-state: paused; }
+
+/* ── Parallax overlay ─────────────────────────────────── */
+.parallax-section {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ── Nav link underline effect ────────────────────────── */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -0.2vw;
+  left: 0;
+  width: 0;
+  height: 0.1vw;
+  background: #d4af37;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* ── Button styles ────────────────────────────────────── */
+.btn-gold {
+  background: linear-gradient(135deg, #d4af37, #f5d77e, #c8951c);
+  background-size: 200% auto;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-gold:hover {
+  background-position: right center;
+  transform: translateY(-0.15vw);
+  box-shadow: 0 0.4vw 1.5vw rgba(212,175,55,0.4);
+}
+
+.btn-outline-gold {
+  border: 0.1vw solid #d4af37;
+  color: #d4af37;
+  background: transparent;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.btn-outline-gold:hover {
+  background: #d4af37;
+  color: #fff;
+  transform: translateY(-0.15vw);
+}
+
+/* ── Card hover lift ──────────────────────────────────── */
+.card-lift {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.card-lift:hover {
+  transform: translateY(-0.5vw);
+  box-shadow: 0 1.5vw 3vw rgba(0,0,0,0.15);
+}
+
+/* ── Tab underline active ─────────────────────────────── */
+.tab-active {
+  color: #7c1b2e;
+  border-bottom: 0.15vw solid #d4af37;
+}
+
+/* ── Section headings ─────────────────────────────────── */
+.section-eyebrow {
+  font-family: 'Great Vibes', cursive;
+  color: #d4af37;
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+/* ── Image overlay on hover ───────────────────────────── */
+.img-hover-zoom {
+  overflow: hidden;
+}
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* ── Horizontal scroll snap ───────────────────────────── */
+.snap-container {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-item {
+  scroll-snap-align: start;
+}
+
+/* ── Animations ───────────────────────────────────────── */
+@keyframes scrollX {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% center; }
+  50%       { background-position: 200% center; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(2vw); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-0.6vw); }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+.animate-float       { animation: float 3s ease-in-out infinite; }
