@@ -63,33 +63,21 @@ const WeddingLookBook = () => {
   return (
     <section id="look-book" className="bg-white py-[6vw] overflow-hidden">
       {/* Header */}
-      <div className="flex flex-col lg:flex-row lg:items-end justify-between px-[5vw] mb-[3.5vw] gap-[2vw]">
-        <div>
-          <p className="section-eyebrow">Editorial</p>
-          <h2
-            className="section-title text-charcoal mt-[0.5vw]"
-            style={{ fontSize: 'clamp(1.6rem,3.5vw,3.5rem)' }}
-          >
-            Wedding{' '}
-            <span className="italic text-burgundy">Look</span>{' '}
-            Book
-          </h2>
-          <div className="gold-divider mt-[1.5vw] ml-0" style={{ width: '5vw' }} />
-          <p
-            className="font-sans text-charcoal-light mt-[1.5vw] max-w-[35vw] leading-relaxed"
-            style={{ fontSize: 'clamp(0.75rem,1vw,1rem)' }}
-          >
-            Discover uniquely crafted pieces that celebrate heritage craftsmanship and
-            contemporary aesthetics for today's bride
-          </p>
-        </div>
+      <div className="flex flex-col items-start md:items-center text-left md:text-center px-[5vw] mb-[5vw] md:mb-[4vw]">
+        <p className="font-sans text-[#b58c2a] mb-[1.5vw] md:mb-[1vw] uppercase tracking-[0.25em] text-[clamp(0.8rem,1vw,0.9rem)] font-medium">
+          Editorial
+        </p>
+        <h2 className="font-serif text-[clamp(2.8rem,5vw,5rem)] mb-[2vw] font-light text-[#1a1a1a] leading-tight">
+          Wedding <span className="italic text-[#b58c2a]">Look</span> Book
+        </h2>
+        <div className="w-[15vw] md:w-[8vw] h-[1px] bg-[#d4af37]/60 mb-[3vw]" />
+        <p className="font-sans text-[#5a5a5a] max-w-[90vw] lg:max-w-[50vw] leading-relaxed font-light" style={{ fontSize: 'clamp(1rem,1.1vw,1.1rem)' }}>
+          Discover uniquely crafted pieces that celebrate heritage craftsmanship and contemporary aesthetics for today's bride
+        </p>
       </div>
 
       {/* ── Auto-scrolling track ── */}
       <div className="relative w-full overflow-hidden">
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-[5vw] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-[5vw] bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
         {/* Infinite scroll strip */}
         <div className="lookbook-track" aria-label="Wedding look book carousel">
@@ -157,34 +145,13 @@ const WeddingLookBook = () => {
                 >
                   Explore
                   <svg className="w-[0.8vw] h-[0.8vw] min-w-[10px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
               </div>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Dot indicators */}
-      <div className="flex justify-center gap-[0.8vw] mt-[3vw]">
-        {lookbookItems.map((_, i) => (
-          <span
-            key={i}
-            className={`rounded-full block transition-all duration-300 ${
-              i === 0
-                ? 'bg-gold-500 w-[2vw] min-w-[16px] h-[0.5vw] min-h-[5px]'
-                : 'bg-gold-300 w-[0.5vw] min-w-[5px] h-[0.5vw] min-h-[5px]'
-            }`}
-          />
-        ))}
-      </div>
-
-      {/* View All CTA */}
-      <div className="text-center mt-[3vw]">
-        <button className="btn-outline-gold px-[3vw] py-[1vw] rounded-full font-sans text-[clamp(0.6rem,0.85vw,0.85rem)] border border-gold-500 text-gold-600 hover:bg-gold-500 hover:text-white transition-all duration-300">
-          View Full Look Book
-        </button>
       </div>
     </section>
   );

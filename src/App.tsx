@@ -3,6 +3,8 @@ import HeroBanner from './components/HeroBanner';
 import TapestryOfTraditions from './components/TapestryOfTraditions';
 import Categories from './components/Categories';
 import WeddingLookBook from './components/WeddingLookBook';
+import MenSection from './components/MenSection';
+import PremiumServices from './components/PremiumServices';
 import AboutContent from './components/AboutContent';
 import './index.css';
 
@@ -14,6 +16,8 @@ function App() {
       <TapestryOfTraditions />
       <Categories />
       <WeddingLookBook />
+      <MenSection />
+      <PremiumServices />
       <AboutContent />
     </div>
   );

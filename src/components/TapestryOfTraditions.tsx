@@ -18,24 +18,26 @@ const TapestryOfTraditions = () => {
   };
 
   return (
-    <section id="tapestry-of-traditions" className="py-[6vw] bg-[#fdf8f0] text-center overflow-hidden">
-      <h2 className="font-serif text-charcoal mb-[1vw]" style={{ fontSize: 'clamp(2rem,3.5vw,3.5rem)' }}>
-        Tapestry of Traditions
-      </h2>
-      <p className="font-sans text-charcoal-light mb-[0.2vw]" style={{ fontSize: 'clamp(0.8rem,1vw,1rem)' }}>
-        Sacred rituals bloom into an eternal promise.
-      </p>
-      <p className="font-sans text-charcoal-light mb-[4vw]" style={{ fontSize: 'clamp(0.8rem,1vw,1rem)' }}>
-        The very essence of an Indian wedding, a journey woven with threads of tradition.
-      </p>
+    <section id="tapestry-of-traditions" className="py-[6vw] bg-[#fdf8f0] overflow-hidden">
+      <div className="flex flex-col items-start md:items-center text-left md:text-center px-[5vw] md:px-0 mb-[5vw] md:mb-[4vw]">
+        <h2 className="font-serif text-charcoal mb-[2vw] md:mb-[1vw] font-medium" style={{ fontSize: 'clamp(2.2rem,3.5vw,4rem)' }}>
+          Tapestry of Traditions
+        </h2>
+        <p className="font-sans text-charcoal-light mb-[1vw] md:mb-[0.2vw]" style={{ fontSize: 'clamp(0.9rem,1vw,1.1rem)' }}>
+          Sacred rituals bloom into an eternal promise.
+        </p>
+        <p className="font-sans text-charcoal-light" style={{ fontSize: 'clamp(0.9rem,1vw,1.1rem)' }}>
+          The very essence of an Indian wedding, a journey woven with threads of tradition.
+        </p>
+      </div>
 
       <div className="relative w-full max-w-[90vw] mx-auto flex items-center">
         {/* Left Arrow */}
         <button
           onClick={() => scroll(-1)}
-          className="absolute left-[0] md:left-[-2vw] z-10 w-[3.5vw] h-[3.5vw] min-w-[44px] min-h-[44px] rounded-full border border-orange-200 bg-white/80 flex items-center justify-center text-charcoal hover:border-gold-500 transition-colors shadow-sm"
+          className="absolute left-[1vw] md:left-[-2vw] z-10 w-[10vw] h-[10vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[42px] min-h-[42px] rounded-full border border-orange-200 bg-white/90 flex items-center justify-center text-charcoal hover:border-gold-500 transition-colors shadow-md"
         >
-          <svg className="w-[1.2vw] h-[1.2vw] min-w-[16px]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+          <svg className="w-[4.5vw] h-[4.5vw] md:w-[1.2vw] md:h-[1.2vw] min-w-[20px] md:min-w-[24px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
           </svg>
         </button>
@@ -71,9 +73,9 @@ const TapestryOfTraditions = () => {
         {/* Right Arrow */}
         <button
           onClick={() => scroll(1)}
-          className="absolute right-[0] md:right-[-2vw] z-10 w-[3.5vw] h-[3.5vw] min-w-[44px] min-h-[44px] rounded-full border border-orange-200 bg-white/80 flex items-center justify-center text-charcoal hover:border-gold-500 transition-colors shadow-sm"
+          className="absolute right-[1vw] md:right-[-2vw] z-10 w-[10vw] h-[10vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[42px] min-h-[42px] rounded-full border border-orange-200 bg-white/90 flex items-center justify-center text-charcoal hover:border-gold-500 transition-colors shadow-md"
         >
-          <svg className="w-[1.2vw] h-[1.2vw] min-w-[16px]" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+          <svg className="w-[4.5vw] h-[4.5vw] md:w-[1.2vw] md:h-[1.2vw] min-w-[20px] md:min-w-[24px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
           </svg>
         </button>
