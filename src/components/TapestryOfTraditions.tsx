@@ -1,11 +1,16 @@
 import { useRef } from 'react';
+import imgweddingDayBride1781253871704 from '../assets/traditions/wedding_day_bride.png';
+import imgsangeetBride1781253825147 from '../assets/traditions/sangeet_bride.png';
+import imgreceptionBride1781253897323 from '../assets/traditions/reception_bride.png';
+import imgmehendiBride1781253860448 from '../assets/traditions/mehendi_bride.png';
+import imgengagementBride1781253813223 from '../assets/traditions/engagement_bride.png';
 
 const traditions = [
-  { id: 1, title: 'Shaadi', image: '/wedding_day_bride_1781253871704.png' },
-  { id: 2, title: 'Sangeet', image: '/sangeet_bride_1781253825147.png' },
-  { id: 3, title: 'Reception', image: '/reception_bride_1781253897323.png' },
-  { id: 4, title: 'Mehendi', image: '/mehendi_bride_1781253860448.png' },
-  { id: 5, title: 'Engagement', image: '/engagement_bride_1781253813223.png' },
+  { id: 1, title: 'Shaadi', image: imgweddingDayBride1781253871704 },
+  { id: 2, title: 'Sangeet', image: imgsangeetBride1781253825147 },
+  { id: 3, title: 'Reception', image: imgreceptionBride1781253897323 },
+  { id: 4, title: 'Mehendi', image: imgmehendiBride1781253860448 },
+  { id: 5, title: 'Engagement', image: imgengagementBride1781253813223 },
 ];
 
 const TapestryOfTraditions = () => {
@@ -38,7 +43,7 @@ const TapestryOfTraditions = () => {
           className="absolute left-[1vw] md:left-[-2vw] z-10 w-[10vw] h-[10vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[42px] min-h-[42px] rounded-full border border-orange-200 bg-white/90 flex items-center justify-center text-charcoal hover:border-gold-500 transition-colors shadow-md"
         >
           <svg className="w-[4.5vw] h-[4.5vw] md:w-[1.2vw] md:h-[1.2vw] min-w-[20px] md:min-w-[24px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
@@ -76,7 +81,7 @@ const TapestryOfTraditions = () => {
           className="absolute right-[1vw] md:right-[-2vw] z-10 w-[10vw] h-[10vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[42px] min-h-[42px] rounded-full border border-orange-200 bg-white/90 flex items-center justify-center text-charcoal hover:border-gold-500 transition-colors shadow-md"
         >
           <svg className="w-[4.5vw] h-[4.5vw] md:w-[1.2vw] md:h-[1.2vw] min-w-[20px] md:min-w-[24px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>

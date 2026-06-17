@@ -1,28 +1,32 @@
 import React from 'react';
+import imgmensBraceletLuxury1781338610044 from '../assets/men/mens_bracelet_luxury.png';
+import imgmensWatchLuxury1781338621865 from '../assets/men/mens_watch_luxury.png';
+import imgmensJewelryLuxury1781338641952 from '../assets/men/mens_jewelry_luxury.png';
+import imgmensChainLuxury1781338652333 from '../assets/men/mens_chain_luxury.png';
 
 const menCategories = [
   {
     title: "Men's Bracelets",
     subtitle: "Bold & sophisticated statement pieces",
-    image: "/mens_bracelet_luxury_1781338610044.png",
+    image: imgmensBraceletLuxury1781338610044,
     link: "https://sirisamruddhigold.in/product-category/bracelets/"
   },
   {
     title: "Luxury Watches",
     subtitle: "Timeless elegance for the modern gentleman",
-    image: "/mens_watch_luxury_1781338621865.png",
+    image: imgmensWatchLuxury1781338621865,
     link: "https://sirisamruddhigold.in/product-category/watch/"
   },
   {
     title: "Men's Jewelry",
     subtitle: "Signature rings & premium accessories",
-    image: "/mens_jewelry_luxury_1781338641952.png",
+    image: imgmensJewelryLuxury1781338641952,
     link: "https://sirisamruddhigold.in/product-category/mens-jewelry/"
   },
   {
     title: "Gold Chains",
     subtitle: "Thick, heavy, 24k classic craftsmanship",
-    image: "/mens_chain_luxury_1781338652333.png",
+    image: imgmensChainLuxury1781338652333,
     link: "https://sirisamruddhigold.in/product-category/gold-chains-2/"
   }
 ];
@@ -61,10 +65,10 @@ const MenSection = () => {
               alt={item.title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            
+
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300" />
-            
+
             {/* Content */}
             <div className="absolute bottom-0 left-0 w-full p-[6vw] md:p-[3vw] flex flex-col items-start transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
               <h3 className="font-serif text-[clamp(1.5rem,2vw,2.2rem)] font-medium text-white mb-[1vw] md:mb-[0.5vw]">

@@ -1,4 +1,9 @@
 import React from 'react';
+import imggenHeroBg1781509701068 from '../assets/hero/gen_hero_bg.png';
+import imgheroBride1781253799831 from '../assets/hero/hero_bride.png';
+import imgmehendiBride1781253860448 from '../assets/traditions/mehendi_bride.png';
+import imgreceptionBride1781253897323 from '../assets/traditions/reception_bride.png';
+import imgluxuriousHeroReadmore1781338096464 from '../assets/hero/luxurious_hero_readmore.png';
 
 const HeroBanner = () => {
   return (
@@ -6,7 +11,7 @@ const HeroBanner = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/premium_gold_jewelry_bg_1781336116492.png"
+          src={imggenHeroBg1781509701068}
           alt="Luxury Bridal Jewelry"
           className="w-full h-full object-cover object-center"
         />
@@ -53,9 +58,9 @@ const HeroBanner = () => {
           <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-full py-[2vw] md:py-[1.2vw] px-[4vw] md:px-[2vw] flex items-center gap-[2vw] md:gap-[1vw] shadow-[0_8px_32px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1 duration-300 w-max self-start md:self-end">
             {/* Avatars */}
             <div className="flex -space-x-3">
-              <img src="/hero_bride_1781253799831.png" className="w-[12vw] h-[12vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[40px] min-h-[40px] rounded-full border-[2px] border-white object-cover" alt="client" />
-              <img src="/mehendi_bride_1781253860448.png" className="w-[12vw] h-[12vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[40px] min-h-[40px] rounded-full border-[2px] border-white object-cover" alt="client" />
-              <img src="/reception_bride_1781253897323.png" className="w-[12vw] h-[12vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[40px] min-h-[40px] rounded-full border-[2px] border-white object-cover" alt="client" />
+              <img src={imgheroBride1781253799831} className="w-[12vw] h-[12vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[40px] min-h-[40px] rounded-full border-[2px] border-white object-cover" alt="client" />
+              <img src={imgmehendiBride1781253860448} className="w-[12vw] h-[12vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[40px] min-h-[40px] rounded-full border-[2px] border-white object-cover" alt="client" />
+              <img src={imgreceptionBride1781253897323} className="w-[12vw] h-[12vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[40px] min-h-[40px] rounded-full border-[2px] border-white object-cover" alt="client" />
               <div className="w-[12vw] h-[12vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[40px] min-h-[40px] rounded-full border-[2px] border-white bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#4a332a] font-bold text-lg shadow-inner z-10">
                 +
               </div>
@@ -72,7 +77,7 @@ const HeroBanner = () => {
           {/* Product Highlight Card */}
           <div className="relative bg-white/95 backdrop-blur-md border border-white/50 rounded-[2.5vw] md:rounded-[1vw] p-[3vw] md:p-[1.5vw] flex items-center gap-[3vw] md:gap-[1.5vw] shadow-[0_15px_35px_rgba(0,0,0,0.15)] transition-transform hover:-translate-y-2 duration-300 w-[90vw] md:w-auto max-w-[450px] self-center md:self-end">
             <div className="w-[20vw] h-[20vw] md:w-[6vw] md:h-[6vw] min-w-[70px] min-h-[70px] rounded-[1vw] md:rounded-[0.8vw] overflow-hidden bg-[#fdf8f0] shadow-inner flex-shrink-0">
-              <img src="/luxurious_hero_readmore_1781338096464.png" className="w-full h-full object-cover" alt="Luxury Bridal Jewelry" />
+              <img src={imgluxuriousHeroReadmore1781338096464} className="w-full h-full object-cover" alt="Luxury Bridal Jewelry" />
             </div>
             <div className="flex-1 pr-[1vw]">
               <h4 className="font-serif text-[#1a1a1a] text-[clamp(1.1rem,1.3vw,1.4rem)] font-medium leading-[1.2] mb-[1.5vw] md:mb-[0.5vw]">

@@ -1,33 +1,61 @@
 import { useState, useRef } from 'react';
+import imgpolkiNecklaceProduct1781253961668 from '../assets/categories/necklaces/polki_necklace_product.png';
+import imgheroBannerJewelry1781254018669 from '../assets/categories/necklaces/hero_banner_jewelry.png';
+import imggoldJewelrySet1781253913771 from '../assets/categories/necklaces/gold_jewelry_set.png';
+import imglookbookGoldBride1781253936927 from '../assets/lookbook/lookbook_gold_bride.png';
+import imgpremiumBridalBangles1781335037021 from '../assets/categories/bangles/premium_bridal_bangles.png';
+import imgmehendiBride1781253860448 from '../assets/traditions/mehendi_bride.png';
+import imgsangeetBride1781253825147 from '../assets/traditions/sangeet_bride.png';
+import imggenBangles11781509436906 from '../assets/categories/bangles/gen_bangles_1.png';
+import imggenBangles21781509450569 from '../assets/categories/bangles/gen_bangles_2.png';
+import imgpremiumBridalRing1781335021776 from '../assets/categories/rings/premium_bridal_ring.png';
+import imgheroBride1781253799831 from '../assets/hero/hero_bride.png';
+import imgreceptionBride1781253897323 from '../assets/traditions/reception_bride.png';
+import imggenRings11781509468914 from '../assets/categories/rings/gen_rings_1.png';
+import imggenRings21781509490143 from '../assets/categories/rings/gen_rings_2.png';
+import imgkundanEarringsProduct1781253994400 from '../assets/categories/earrings/kundan_earrings_product.png';
+import imglookbookSangeetLook1781253950121 from '../assets/lookbook/lookbook_sangeet_look.png';
+import imgweddingDayBride1781253871704 from '../assets/traditions/wedding_day_bride.png';
+import imgmaangTikkaProduct1781254005481 from '../assets/categories/accessories/maang_tikka_product.png';
+import imggenWeddingAcc11781509504854 from '../assets/categories/accessories/gen_wedding_acc_1.png';
+import imggenWeddingAcc21781509517708 from '../assets/categories/accessories/gen_wedding_acc_2.png';
+import imggenWeddingAcc31781509531778 from '../assets/categories/accessories/gen_wedding_acc_3.png';
 
 // Define image pools for different categories
 const categoryData = {
   Necklaces: [
-    { id: 1, image: '/polki_necklace_product_1781253961668.png', span: false },
-    { id: 2, image: '/hero_banner_jewelry_1781254018669.png', span: true },
-    { id: 3, image: '/gold_jewelry_set_1781253913771.png', span: false },
-    { id: 4, image: '/lookbook_gold_bride_1781253936927.png', span: false },
+    { id: 1, image: imgpolkiNecklaceProduct1781253961668, span: false },
+    { id: 2, image: imgheroBannerJewelry1781254018669, span: true },
+    { id: 3, image: imggoldJewelrySet1781253913771, span: false },
+    { id: 4, image: imglookbookGoldBride1781253936927, span: false },
   ],
   Bangles: [
-    { id: 1, image: '/premium_bridal_bangles_1781335037021.png', span: false },
-    { id: 2, image: '/mehendi_bride_1781253860448.png', span: true },
-    { id: 3, image: '/sangeet_bride_1781253825147.png', span: false },
+    { id: 1, image: imgpremiumBridalBangles1781335037021, span: false },
+    { id: 2, image: imgmehendiBride1781253860448, span: true },
+    { id: 3, image: imgsangeetBride1781253825147, span: false },
+    { id: 4, image: imggenBangles11781509436906, span: false },
+    { id: 5, image: imggenBangles21781509450569, span: true },
   ],
   Rings: [
-    { id: 1, image: '/premium_bridal_ring_1781335021776.png', span: false },
-    { id: 2, image: '/hero_bride_1781253799831.png', span: true },
-    { id: 3, image: '/reception_bride_1781253897323.png', span: false },
+    { id: 1, image: imgpremiumBridalRing1781335021776, span: false },
+    { id: 2, image: imgheroBride1781253799831, span: true },
+    { id: 3, image: imgreceptionBride1781253897323, span: false },
+    { id: 4, image: imggenRings11781509468914, span: false },
+    { id: 5, image: imggenRings21781509490143, span: true },
   ],
   Earrings: [
-    { id: 1, image: '/kundan_earrings_product_1781253994400.png', span: false },
-    { id: 2, image: '/lookbook_sangeet_look_1781253950121.png', span: true },
-    { id: 3, image: '/reception_bride_1781253897323.png', span: false },
-    { id: 4, image: '/wedding_day_bride_1781253871704.png', span: false },
+    { id: 1, image: imgkundanEarringsProduct1781253994400, span: false },
+    { id: 2, image: imglookbookSangeetLook1781253950121, span: true },
+    { id: 3, image: imgreceptionBride1781253897323, span: false },
+    { id: 4, image: imgweddingDayBride1781253871704, span: false },
   ],
   'Wedding Accessories': [
-    { id: 1, image: '/maang_tikka_product_1781254005481.png', span: false },
-    { id: 2, image: '/wedding_day_bride_1781253871704.png', span: true },
-    { id: 3, image: '/lookbook_gold_bride_1781253936927.png', span: false },
+    { id: 1, image: imgmaangTikkaProduct1781254005481, span: false },
+    { id: 2, image: imgweddingDayBride1781253871704, span: true },
+    { id: 3, image: imglookbookGoldBride1781253936927, span: false },
+    { id: 4, image: imggenWeddingAcc11781509504854, span: false },
+    { id: 5, image: imggenWeddingAcc21781509517708, span: true },
+    { id: 6, image: imggenWeddingAcc31781509531778, span: false },
   ],
 };
 
@@ -68,9 +96,8 @@ const Categories = () => {
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`flex-shrink-0 snap-center px-[5vw] md:px-[2.5vw] py-[2.5vw] md:py-[1vw] rounded-[1.5vw] md:rounded-[0.5vw] border transition-all shadow-sm ${
-              activeCategory === cat ? 'bg-[#4a332a] text-white border-[#4a332a] font-medium' : 'bg-white border-gray-200 hover:border-[#4a332a] hover:text-[#4a332a]'
-            }`}
+            className={`flex-shrink-0 snap-center px-[5vw] md:px-[2.5vw] py-[2.5vw] md:py-[1vw] rounded-[1.5vw] md:rounded-[0.5vw] border transition-all shadow-sm ${activeCategory === cat ? 'bg-[#4a332a] text-white border-[#4a332a] font-medium' : 'bg-white border-gray-200 hover:border-[#4a332a] hover:text-[#4a332a]'
+              }`}
             style={{ fontSize: 'clamp(0.95rem,1.2vw,1.1rem)' }}
           >
             {cat}
@@ -85,7 +112,7 @@ const Categories = () => {
           className="absolute left-[1vw] md:left-[-2vw] z-10 w-[10vw] h-[10vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[42px] min-h-[42px] rounded-full border border-orange-200 bg-white/90 flex items-center justify-center text-[#4a332a] hover:border-[#4a332a] transition-colors shadow-md"
         >
           <svg className="w-[4.5vw] h-[4.5vw] md:w-[1.2vw] md:h-[1.2vw] min-w-[20px] md:min-w-[24px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
@@ -127,7 +154,7 @@ const Categories = () => {
           className="absolute right-[1vw] md:right-[-2vw] z-10 w-[10vw] h-[10vw] md:w-[3.5vw] md:h-[3.5vw] min-w-[42px] min-h-[42px] rounded-full border border-orange-200 bg-white/90 flex items-center justify-center text-[#4a332a] hover:border-[#4a332a] transition-colors shadow-md"
         >
           <svg className="w-[4.5vw] h-[4.5vw] md:w-[1.2vw] md:h-[1.2vw] min-w-[20px] md:min-w-[24px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
       </div>

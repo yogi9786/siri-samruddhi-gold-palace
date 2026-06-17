@@ -1,11 +1,21 @@
 import { useRef } from 'react';
+import imgheroBride1781253799831 from '../assets/hero/hero_bride.png';
+import imggoldJewelrySet1781253913771 from '../assets/categories/necklaces/gold_jewelry_set.png';
+import imglookbookGoldBride1781253936927 from '../assets/lookbook/lookbook_gold_bride.png';
+import imgpolkiNecklaceProduct1781253961668 from '../assets/categories/necklaces/polki_necklace_product.png';
+import imglookbookSangeetLook1781253950121 from '../assets/lookbook/lookbook_sangeet_look.png';
+import imgkundanEarringsProduct1781253994400 from '../assets/categories/earrings/kundan_earrings_product.png';
+import imgmehendiBride1781253860448 from '../assets/traditions/mehendi_bride.png';
+import imgmeenakariBangles1781253972778 from '../assets/categories/bangles/meenakari_bangles.png';
+import imgreceptionBride1781253897323 from '../assets/traditions/reception_bride.png';
+import imgmaangTikkaProduct1781254005481 from '../assets/categories/accessories/maang_tikka_product.png';
 
 const lookbookItems = [
   {
     id: 1,
     num: '01',
-    brideImg: '/hero_bride_1781253799831.png',
-    productImg: '/gold_jewelry_set_1781253913771.png',
+    brideImg: imgheroBride1781253799831,
+    productImg: imggoldJewelrySet1781253913771,
     title: 'The Gold Bride',
     subtitle: 'Featuring intricately layered gold silhouettes perfect for a regal look',
     tag: 'Wedding Day',
@@ -13,8 +23,8 @@ const lookbookItems = [
   {
     id: 2,
     num: '02',
-    brideImg: '/lookbook_gold_bride_1781253936927.png',
-    productImg: '/polki_necklace_product_1781253961668.png',
+    brideImg: imglookbookGoldBride1781253936927,
+    productImg: imgpolkiNecklaceProduct1781253961668,
     title: 'Sangeet Look',
     subtitle: 'A captivating blend of polki, diamond, and created Russian emerald stone',
     tag: 'Sangeet',
@@ -22,8 +32,8 @@ const lookbookItems = [
   {
     id: 3,
     num: '03',
-    brideImg: '/lookbook_sangeet_look_1781253950121.png',
-    productImg: '/kundan_earrings_product_1781253994400.png',
+    brideImg: imglookbookSangeetLook1781253950121,
+    productImg: imgkundanEarringsProduct1781253994400,
     title: 'Kundan Royale',
     subtitle: 'Heritage kundan craftsmanship with ruby drops and uncut diamonds',
     tag: 'Wedding Day',
@@ -31,8 +41,8 @@ const lookbookItems = [
   {
     id: 4,
     num: '04',
-    brideImg: '/mehendi_bride_1781253860448.png',
-    productImg: '/meenakari_bangles_1781253972778.png',
+    brideImg: imgmehendiBride1781253860448,
+    productImg: imgmeenakariBangles1781253972778,
     title: 'Mehendi Muse',
     subtitle: 'Vibrant meenakari work with turquoise stones for the joyful Mehendi day',
     tag: 'Mehendi',
@@ -40,8 +50,8 @@ const lookbookItems = [
   {
     id: 5,
     num: '05',
-    brideImg: '/reception_bride_1781253897323.png',
-    productImg: '/maang_tikka_product_1781254005481.png',
+    brideImg: imgreceptionBride1781253897323,
+    productImg: imgmaangTikkaProduct1781254005481,
     title: 'Reception Glow',
     subtitle: 'Contemporary diamond elegance for a breathtaking reception night',
     tag: 'Reception',
