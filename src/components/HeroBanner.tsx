@@ -34,7 +34,7 @@ const HeroBanner = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen lg:min-h-0 lg:h-screen lg:max-h-screen overflow-hidden bg-[#8c6b5d] flex items-start lg:items-center justify-center pt-[140px] md:pt-[140px] lg:pt-[150px] pb-[40px] lg:pb-[60px]">
+    <section id="contactus" className="relative w-full min-h-screen lg:min-h-0 lg:h-screen lg:max-h-screen overflow-hidden bg-[#8c6b5d] flex items-start lg:items-center justify-center pt-[140px] md:pt-[140px] lg:pt-[150px] pb-[40px] lg:pb-[60px]">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img

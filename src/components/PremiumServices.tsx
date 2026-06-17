@@ -150,7 +150,10 @@ const PremiumServices = () => {
         viewport={{ once: true, margin: "-50px" }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        <button className="mt-[10vw] md:mt-[6vw] border border-[#d4af37] text-[#1a1a1a] hover:bg-[#d4af37] hover:text-white px-[8vw] md:px-[4.5vw] py-[3.5vw] md:py-[1.2vw] font-sans text-[clamp(0.85rem,1vw,1rem)] uppercase tracking-[0.2em] transition-all duration-500 shadow-[0_4px_15px_rgba(212,175,55,0.1)] hover:shadow-[0_10px_30px_rgba(212,175,55,0.2)] bg-white relative overflow-hidden group rounded-sm">
+        <button 
+          onClick={() => document.getElementById('contactus')?.scrollIntoView({ behavior: 'smooth' })}
+          className="mt-[10vw] md:mt-[6vw] border border-[#d4af37] text-[#1a1a1a] hover:bg-[#d4af37] hover:text-white px-[8vw] md:px-[4.5vw] py-[3.5vw] md:py-[1.2vw] font-sans text-[clamp(0.85rem,1vw,1rem)] uppercase tracking-[0.2em] transition-all duration-500 shadow-[0_4px_15px_rgba(212,175,55,0.1)] hover:shadow-[0_10px_30px_rgba(212,175,55,0.2)] bg-white relative overflow-hidden group rounded-sm"
+        >
           <span className="relative z-10 group-hover:text-white transition-colors duration-500 font-medium">Reserve an Appointment</span>
           <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#d4af37] to-[#b58c2a] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out" />
         </button>

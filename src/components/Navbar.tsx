@@ -51,7 +51,7 @@ const Navbar = () => {
               </button>
             ))}
           </div>
-          <button className="bg-[#4a332a] text-white hover:bg-[#32221c] transition-colors rounded-full px-[2vw] py-[0.8vw] font-sans text-[0.85rem] font-medium ml-[1vw]">
+          <button onClick={() => handleScrollTo('contactus')} className="bg-[#4a332a] text-white hover:bg-[#32221c] transition-colors rounded-full px-[2vw] py-[0.8vw] font-sans text-[0.85rem] font-medium ml-[1vw]">
             Contact Us
           </button>
         </nav>
@@ -84,7 +84,7 @@ const Navbar = () => {
               {label}
             </button>
           ))}
-          <button className="bg-[#4a332a] text-white rounded-full py-[3vw] font-sans text-[1.1rem] font-medium w-full mt-[2vw]">
+          <button onClick={() => handleScrollTo('contactus')} className="bg-[#4a332a] text-white rounded-full py-[3vw] font-sans text-[1.1rem] font-medium w-full mt-[2vw]">
             Contact Us
           </button>
         </div>
